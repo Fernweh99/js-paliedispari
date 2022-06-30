@@ -17,9 +17,13 @@ function isEven(num){
   let result = num % 2 ? false : true;
   return result;
 }
+  let userChoice =  prompt('scegli "pari" o "dispari"').trim().toLowerCase();
+  while (userChoice !== "pari" && userChoice !== "dispari") {
+    userChoice = prompt('scegli "pari" o "dispari"').trim().toLowerCase();
+  }
 
-const computerNumber = getRandomNumber();
 let userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
+const computerNumber = getRandomNumber();
 
 // Verifico il numero inserito dall'utente 
 while (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
@@ -38,3 +42,8 @@ result = "dispari";
 if (isEven(sum)) result = "pari";
 
 console.log(`la somma dei numeri: ${userNumber} e ${computerNumber}, è ${result}`);
+
+let messageWin = "Ha vinto il ";
+messageWin += result === userChoice ? "giocatore" : "computer";
+
+console.log(messageWin);
