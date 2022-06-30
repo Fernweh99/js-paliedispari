@@ -5,7 +5,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 */
 
 //chiedo la parola all'user
-inputWord = prompt("Inserisci una parola");
+let inputWord = prompt("Inserisci una parola");
 
 // Creo la funzione per verificare se una parola è polidroma
 function isPolidroma(word) {
@@ -24,5 +24,5 @@ function isPolidroma(word) {
 }
 
 //stampo il messaggio
-message = `La parola ${inputWord} è ${isPolidroma(inputWord)} sull'essere polidroma`;
+let message = `La parola ${inputWord} è ${isPolidroma(inputWord)} sull'essere polidroma`;
 console.log(message);
